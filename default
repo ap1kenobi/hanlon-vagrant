@@ -1,0 +1,16 @@
+default menu.c32
+prompt 0
+menu title Hanlon Boot Menu
+
+timeout 50
+f1 help.txt
+f2 version.txt
+
+label hanlon-boot
+menu label Automatic hanlon Node Boot
+kernel ipxe.lkrn
+append initrd=hanlon.ipxe
+
+label boot-else
+menu label Bypass hanlon
+localboot 1
