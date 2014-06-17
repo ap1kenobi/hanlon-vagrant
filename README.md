@@ -1,6 +1,6 @@
 [Hanlon](https://github.com/csc/Hanlon) Vagrant[ified]
 ==============
-This is work in progress (WIP) and the provisioning shell "script" is being ported to chef-solo, puppet and ansible.
+Please note that the provisioning shell "script" is being ported to chef-solo, puppet and ansible.
 
 
 Getting Started
@@ -19,7 +19,7 @@ git clone https://github.com/ap1kenobi/hanlon-vagrant ~/hanlon
 cd ~/hanlon
 vagrant up
 ```
-Once it finished provisioning (hopefully without errors), ssh to the VM:
+Once it's finished provisioning (hopefully without errors), ssh to the VM:
 
 ```
 vagrant ssh
@@ -85,4 +85,4 @@ Create the policy:
 Credits
 ===
 
-```bootstrap.sh``` and the manual steps is based on Joe's work outlined in his wiki page: [here](https://github.com/jcpowermac/hanlon-wiki/blob/master/detailed-hanlon-install.md) 
+```bootstrap.sh``` and the manual steps are based on Joe's work outlined in his wiki page: [here](https://github.com/jcpowermac/hanlon-wiki/blob/master/detailed-hanlon-install.md) 
