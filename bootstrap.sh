@@ -38,17 +38,25 @@ source ~/.bash_profile
 
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-rbenv install jruby-1.7.12
-rbenv global jruby-1.7.12
-gem install bundler trinidad
-rbenv rehash
-
+#Get Hanlon
 sudo mkdir /opt/hanlon/
 sudo chmod -R 777 /opt/hanlon/
 sudo chown -R nobody /opt/hanlon/
 
 cd /opt/hanlon/
 git clone https://github.com/csc/Hanlon.git .
+
+#Install rubies
+rbenv install 1.9.3-p547
+rbenv global 1.9.3-p547
+gem install bundler trinidad
+rbenv rehash
+bundle install
+
+rbenv install jruby-1.7.12
+rbenv global jruby-1.7.12
+gem install bundler trinidad
+rbenv rehash
 bundle install
 
 ./hanlon_init
