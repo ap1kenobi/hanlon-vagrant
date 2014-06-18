@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 sudo apt-get update
+<<<<<<< HEAD
 sudo apt-get install -y git make mongodb openjdk-7-jre-headless g++ isc-dhcp-server ipxe tftp tftpd curl zlib1g-dev libssl-dev
+>>>>>>> master
 
 #Configure tftpd
 [ ! -d /tftpboot ] && sudo mkdir /tftpboot
