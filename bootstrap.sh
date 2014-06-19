@@ -60,6 +60,9 @@ gem install bundler
 rbenv rehash
 bundle install
 
+#Create config files
+./hanlon_init #need to modify hanlon server IP in the /opt/hanlon/web/conf/hanlon_server.conf
+
 #Create Hanlon iPXE configuration
 ./cli/hanlon config ipxe > /tftpboot/hanlon.ipxe
 
@@ -68,9 +71,6 @@ wget -nv https://github.com/csc/Hanlon-Microkernel/releases/download/v1.0/hnl_mk
 
 #Add CentOS image
 wget -nv http://reflector.westga.edu/repos/CentOS/6.5/isos/x86_64/CentOS-6.5-x86_64-minimal.iso
-
-#Create config files
-./hanlon_init #need to modify hanlon server IP in the /opt/hanlon/web/conf/hanlon_server.conf
 
 #Install JRuby
 rbenv install jruby-1.7.12
