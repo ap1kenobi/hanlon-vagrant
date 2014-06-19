@@ -17,11 +17,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
 
-  config.vm.hostname = "hanlon-sandbox"
+  config.vm.hostname = "hanlon-server"
 
-  # Create a private network, which allows host-only access to the machine
-  # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.66.254"
+  # Create a private, internal-only network
+  config.vm.network "private_network", ip: "192.168.66.254", virtualbox__intnet: "hanlon-net"
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -38,9 +37,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
-    vb.name = "Hanlon-Sandbox"
-    vb.customize [ "modifyvm", :id, "--cpus", "2" ]
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.name = "Hanlon Sandbox"
+    vb.cpus = 1
+    vb.memory = 1024
   end
 
   #Enable shell provisioning to bootstrap changes to /etc/hosts
